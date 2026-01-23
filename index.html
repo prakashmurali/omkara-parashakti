@@ -93,13 +93,42 @@
             }
 
             // Update Active State on Buttons (visual feedback)
-            document.getElementById('btn-en').classList.toggle('bg-accent-gold', lang === 'en');
-            document.getElementById('btn-en').classList.toggle('text-white', lang === 'en');
-            document.getElementById('btn-en').classList.toggle('text-text-muted', lang !== 'en');
+            // Update Desktop Buttons
+            const btnEn = document.getElementById('btn-en');
+            const btnMl = document.getElementById('btn-ml');
+            const btnMobileEn = document.getElementById('btn-mobile-en');
+            const btnMobileMl = document.getElementById('btn-mobile-ml');
 
-            document.getElementById('btn-ml').classList.toggle('bg-accent-gold', lang === 'ml');
-            document.getElementById('btn-ml').classList.toggle('text-white', lang === 'ml');
-            document.getElementById('btn-ml').classList.toggle('text-text-muted', lang !== 'ml');
+            const activeClass = ['bg-accent-gold', 'text-white', 'shadow-sm'];
+            const inactiveClass = ['text-text-muted', 'hover:bg-accent-gold/10', 'hover:text-primary'];
+
+            if (lang === 'en') {
+                // Activate English
+                btnEn.classList.add(...activeClass);
+                btnEn.classList.remove('text-text-muted');
+                btnMl.classList.remove(...activeClass);
+                btnMl.classList.add('text-text-muted');
+
+                if (btnMobileEn) {
+                    btnMobileEn.classList.add(...activeClass);
+                    btnMobileEn.classList.remove('text-text-muted');
+                    btnMobileMl.classList.remove(...activeClass);
+                    btnMobileMl.classList.add('text-text-muted');
+                }
+            } else {
+                // Activate Malayalam
+                btnMl.classList.add(...activeClass);
+                btnMl.classList.remove('text-text-muted');
+                btnEn.classList.remove(...activeClass);
+                btnEn.classList.add('text-text-muted');
+
+                if (btnMobileEn) {
+                    btnMobileMl.classList.add(...activeClass);
+                    btnMobileMl.classList.remove('text-text-muted');
+                    btnMobileEn.classList.remove(...activeClass);
+                    btnMobileEn.classList.add('text-text-muted');
+                }
+            }
         }
 
         // Initialize on load
@@ -156,10 +185,10 @@
                 </div>
                 <div class="flex items-center gap-3 md:hidden">
                     <div class="flex items-center rounded-full border border-accent-gold/30 bg-white p-1 shadow-sm">
-                        <button onclick="toggleLanguage('en')"
-                            class="rounded-full bg-accent-gold px-2 py-1 text-[10px] font-bold tracking-wide text-white shadow-sm">Eng</button>
-                        <button onclick="toggleLanguage('ml')"
-                            class="rounded-full px-2 py-1 text-[10px] font-bold text-text-muted">Mal</button>
+                        <button id="btn-mobile-en" onclick="toggleLanguage('en')"
+                            class="rounded-full bg-accent-gold px-2 py-1 text-[10px] font-bold tracking-wide text-white shadow-sm transition-all">Eng</button>
+                        <button id="btn-mobile-ml" onclick="toggleLanguage('ml')"
+                            class="rounded-full px-2 py-1 text-[10px] font-bold text-text-muted transition-all">മലയാളം</button>
                     </div>
                     <button class="flex items-center justify-center p-2 text-[#1b0e0e]">
                         <span class="material-symbols-outlined">menu</span>
