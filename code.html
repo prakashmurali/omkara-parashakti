@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html class="light scroll-smooth" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Omkara Parashakti Devi Kshethram</title>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&amp;family=Noto+Sans:wght@400;500;700&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#cf1717",
+                        "primary-dark": "#9b1111",
+                        "accent-gold": "#d4af37",
+                        "background-light": "#fcf8f8",
+                        "background-dark": "#211111",
+                        "text-main": "#1b0e0e",
+                        "text-muted": "#6b4e4e",
+                    },
+                    fontFamily: {
+                        "display": ["Noto Serif", "serif"],
+                        "sans": ["Noto Sans", "sans-serif"],
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #d4af37;
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #cf1717;
+        }
+
+        .scrollbar-hide::-webkit-scrollbar {
+            display: none;
+        }
+
+        .scrollbar-hide {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+        /* Language Toggle Utility - Relying on Tailwind's 'hidden' class */
+    </style>
+    <script>
+        function toggleLanguage(lang) {
+            // Save preference
+            localStorage.setItem('preferredLanguage', lang);
+
+            // Get all language elements
+            const enElements = document.querySelectorAll('.lang-en');
+            const mlElements = document.querySelectorAll('.lang-ml');
+            const body = document.body;
+
+            // Toggle classes
+            if (lang === 'ml') {
+                enElements.forEach(el => el.classList.add('hidden'));
+                mlElements.forEach(el => el.classList.remove('hidden'));
+                body.classList.add('font-malayalam'); // Optional: for specific font adjustments if needed
+            } else {
+                mlElements.forEach(el => el.classList.add('hidden'));
+                enElements.forEach(el => el.classList.remove('hidden'));
+                body.classList.remove('font-malayalam');
+            }
+
+            // Update Active State on Buttons (visual feedback)
+            document.getElementById('btn-en').classList.toggle('bg-accent-gold', lang === 'en');
+            document.getElementById('btn-en').classList.toggle('text-white', lang === 'en');
+            document.getElementById('btn-en').classList.toggle('text-text-muted', lang !== 'en');
+
+            document.getElementById('btn-ml').classList.toggle('bg-accent-gold', lang === 'ml');
+            document.getElementById('btn-ml').classList.toggle('text-white', lang === 'ml');
+            document.getElementById('btn-ml').classList.toggle('text-text-muted', lang !== 'ml');
+        }
+
+        // Initialize on load
+        document.addEventListener('DOMContentLoaded', () => {
+            const savedLang = localStorage.getItem('preferredLanguage') || 'en';
+            toggleLanguage(savedLang);
+        });
+    </script>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark text-text-main font-display antialiased">
+    <div class="relative flex h-auto min-h-screen w-full flex-col overflow-x-hidden">
+        <header class="sticky top-0 z-50 w-full border-b border-[#f3e7e7] bg-[#fcf8f8]/95 backdrop-blur-sm">
+            <div class="mx-auto flex h-16 max-w-[960px] items-center justify-between px-4 sm:px-10">
+                <div class="flex items-center gap-3">
+                    <span class="material-symbols-outlined text-primary text-3xl">temple_hindu</span>
+                    <h2 class="text-lg font-bold tracking-tight text-[#1b0e0e] sm:text-xl">Omkara Parashakti</h2>
+                </div>
+                <div class="hidden items-center gap-6 md:flex">
+                    <nav class="flex gap-6">
+                        <a class="text-sm font-medium text-[#1b0e0e] transition-colors hover:text-primary"
+                            href="#history">
+                            <span class="lang-en">History</span>
+                            <span class="lang-ml hidden">ചരിത്രം</span>
+                        </a>
+                        <a class="text-sm font-medium text-[#1b0e0e] transition-colors hover:text-primary"
+                            href="#festivals">
+                            <span class="lang-en">Festivals</span>
+                            <span class="lang-ml hidden">ഉത്സവങ്ങൾ</span>
+                        </a>
+                        <a class="text-sm font-medium text-[#1b0e0e] transition-colors hover:text-primary"
+                            href="#gallery">
+                            <span class="lang-en">Gallery</span>
+                            <span class="lang-ml hidden">ഗാലറി</span>
+                        </a>
+                        <a class="text-sm font-medium text-[#1b0e0e] transition-colors hover:text-primary"
+                            href="#location">
+                            <span class="lang-en">Location</span>
+                            <span class="lang-ml hidden">സ്ഥലം</span>
+                        </a>
+                        <a class="text-sm font-medium text-[#1b0e0e] transition-colors hover:text-primary"
+                            href="#contact">
+                            <span class="lang-en">Contact</span>
+                            <span class="lang-ml hidden">ബന്ധപ്പെടുക</span>
+                        </a>
+                    </nav>
+                    <div class="h-6 w-px bg-accent-gold/30"></div>
+                    <div class="flex items-center rounded-full border border-accent-gold/30 bg-white p-1 shadow-sm">
+                        <button id="btn-en" onclick="toggleLanguage('en')"
+                            class="rounded-full bg-accent-gold px-4 py-1 text-xs font-bold tracking-wide text-white shadow-sm transition-all hover:bg-accent-gold/90">English</button>
+                        <button id="btn-ml" onclick="toggleLanguage('ml')"
+                            class="rounded-full px-4 py-1 text-xs font-bold text-text-muted transition-all hover:bg-accent-gold/10 hover:text-primary">മലയാളം</button>
+                    </div>
+                </div>
+                <div class="flex items-center gap-3 md:hidden">
+                    <div class="flex items-center rounded-full border border-accent-gold/30 bg-white p-1 shadow-sm">
+                        <button onclick="toggleLanguage('en')"
+                            class="rounded-full bg-accent-gold px-2 py-1 text-[10px] font-bold tracking-wide text-white shadow-sm">Eng</button>
+                        <button onclick="toggleLanguage('ml')"
+                            class="rounded-full px-2 py-1 text-[10px] font-bold text-text-muted">Mal</button>
+                    </div>
+                    <button class="flex items-center justify-center p-2 text-[#1b0e0e]">
+                        <span class="material-symbols-outlined">menu</span>
+                    </button>
+                </div>
+            </div>
+        </header>
+        <div class="relative w-full">
+            <div class="mx-auto flex max-w-[960px] flex-col px-4 py-8 sm:px-10 sm:py-12">
+                <div class="relative overflow-hidden rounded-xl border-4 border-double border-accent-gold shadow-xl">
+                    <div class="flex min-h-[500px] flex-col items-center justify-end gap-6 bg-cover bg-center p-8 text-center"
+                        data-alt="Majestic hindu temple structure with intricate carvings illuminated by soft golden light at dusk"
+                        style='background-image: linear-gradient(rgba(33, 17, 17, 0.4), rgba(33, 17, 17, 0.7)), url("images/TemplePhoto_watermarked.jpeg");'>
+                        <div class="flex flex-col gap-4 max-w-2xl animate-fade-in-up">
+                            <span class="text-accent-gold text-sm font-bold tracking-widest uppercase">
+                                <span class="lang-en">Kizhakkumpattukara, Thrissur</span>
+                                <span class="lang-ml hidden">കിഴക്കുംപാട്ടുകര, തൃശൂർ</span>
+                            </span>
+                            <h1
+                                class="text-2xl font-black leading-tight tracking-tight text-white sm:text-3xl lg:text-4xl drop-shadow-md">
+                                <span class="lang-en">Amme Narayana Devi Narayana<br />Bhadre Narayana Lakshmi
+                                    Narayana</span>
+                                <span class="lang-ml hidden leading-relaxed">അമ്മേ നാരായണ ദേവി നാരായണ<br />ഭദ്രേ നാരായണ
+                                    ലക്ഷ്മി നാരായണ</span>
+                            </h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <section class="w-full py-12" id="history">
+            <div class="mx-auto max-w-[960px] px-4 sm:px-10">
+                <div class="mb-8 flex items-center gap-4">
+                    <div class="h-px flex-1 bg-accent-gold/40"></div>
+                    <span class="material-symbols-outlined text-accent-gold">local_florist</span>
+                    <h2 class="text-3xl font-bold text-[#1b0e0e]">
+                        <span class="lang-en">Sacred History</span>
+                        <span class="lang-ml hidden">ക്ഷേത്ര ചരിത്രം</span>
+                    </h2>
+                    <span class="material-symbols-outlined text-accent-gold">local_florist</span>
+                    <div class="h-px flex-1 bg-accent-gold/40"></div>
+                </div>
+                <div class="grid gap-10 md:grid-cols-2 items-center">
+                    <div class="order-2 md:order-1 flex flex-col gap-6">
+                        <p class="text-lg leading-relaxed text-text-main">
+                            <span class="lang-en">
+                                <span class="float-left mr-3 text-5xl font-bold text-primary leading-[0.8]">T</span>his
+                                temple was established over 150 years ago through intense tapas and devotion. It has
+                                been
+                                maintained as a family shrine by the Late Shri I.D.
+                                Narayana Iyer and his family . Omkara Parashakti Devi is present in the form of a
+                                trishulam
+                                and a
+                                consecrated vigraham.
+                            </span>
+                            <span class="lang-ml hidden leading-loose">
+                                <span
+                                    class="float-left mr-3 text-5xl font-bold text-primary leading-[0.8]">ക</span>ഠിനമായ
+                                തപസ്സിലൂടെയും ഭക്തിയിലൂടെയും 150 വർഷങ്ങൾക്ക് മുമ്പാണ് ഈ ക്ഷേത്രം സ്വാപിതമായത്. ശ്രീ ഐ.ഡി
+                                നാരായണ അയ്യരും കുടുംബവുമാണ് ഈ കുടുംബ ക്ഷേത്രം പരിപാലിച്ചു പോരുന്നത്. ഓംകാര പരാശക്തി ദേവി
+                                ത്രിശൂല രൂപത്തിലും, പ്രതിഷ്ഠിച്ച വിഗ്രഹ രൂപത്തിലും ഇവിടെ കുടികൊള്ളുന്നു.
+                            </span>
+                        </p>
+                        <p class="text-base leading-relaxed text-text-muted">
+                            <span class="lang-en">
+                                In this vibrant form, Her blessings and presence are available to one and all. The
+                                temple
+                                serves as a beacon of spirituality in Kizhakkumpattukara, continuing the legacy of its
+                                founders.
+                            </span>
+                            <span class="lang-ml hidden leading-loose">
+                                ഈ ചൈതന്യവത്തായ രൂപത്തിൽ, ദേവിയുടെ അനുഗ്രഹവും സാന്നിധ്യവും എല്ലാവർക്കും ലഭ്യമാണ്.
+                                സ്ഥാപകരുടെ പാരമ്പര്യം തുടർന്നുകൊണ്ട് കിഴക്കുംപാട്ടുകരയിലെ ആത്മീയതയുടെ വിളക്കുമാടമായി ഈ
+                                ക്ഷേത്രം നിലകൊള്ളുന്നു.
+                            </span>
+                        </p>
+                        <div class="flex gap-8 pt-4">
+                            <div class="flex flex-col gap-1">
+                                <span class="text-3xl font-bold text-primary">150+</span>
+                                <span class="text-sm font-medium text-text-muted">
+                                    <span class="lang-en">Years of Legacy</span>
+                                    <span class="lang-ml hidden">വർഷങ്ങളുടെ പാരമ്പര്യം</span>
+                                </span>
+                            </div>
+                            <div class="flex flex-col gap-1">
+                                <span class="text-3xl font-bold text-primary">Daily</span>
+                                <span class="text-sm font-medium text-text-muted">
+                                    <span class="lang-en">Poojas &amp; Rituals</span>
+                                    <span class="lang-ml hidden">പൂജകളും ആചാരങ്ങളും</span>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="order-1 md:order-2">
+                        <div
+                            class="relative aspect-[4/5] w-full overflow-hidden rounded-lg shadow-lg border-4 border-white bg-[#f3e7e7]">
+                            <div class="absolute inset-0 bg-cover bg-center" data-alt="Omkara Parashakti Devi"
+                                style='background-image: url("images/DeviPainting_watermarked.jpeg");'>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="w-full bg-[#f8f1f1] py-16" id="festivals">
+            <div class="mx-auto max-w-[960px] px-4 sm:px-10">
+                <div class="mb-10 text-center">
+                    <h2 class="text-3xl font-bold text-[#1b0e0e]">
+                        <span class="lang-en">Major Festivals</span>
+                        <span class="lang-ml hidden">പ്രധാന ഉത്സവങ്ങൾ</span>
+                    </h2>
+                    <p class="mt-2 text-text-muted">
+                        <span class="lang-en">Celebrating the divine with grandeur and devotion</span>
+                        <span class="lang-ml hidden">ദിവ്യത്വത്തെ ആഘോഷപൂർവ്വം വരവേൽക്കുന്നു</span>
+                    </p>
+                </div>
+                <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+                    <div
+                        class="group flex flex-col overflow-hidden rounded-lg bg-white shadow-md transition-shadow hover:shadow-xl border border-[#e7d0d0]">
+                        <div class="aspect-video w-full overflow-hidden bg-gray-200">
+                            <div class="h-full w-full bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
+                                data-alt="Colorful floral decoration for Navaratri festival"
+                                style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuARR0gS-BDJs3LOPotnoCXQ2wyy_O3_qLLBqIRYl9MK1Bt8XHkYOVsHwXQQEdD5LvRPvbZRdqEg8S99A2YpM_WZX5EqI8We1ohnWzXJg7HtujWqbkRcV2gZZUnyHR_0TYBtsDH4RTXWgFmEVqy81kMyodGyEuY4ahK3hKM0eIVa_cascwwHUaX5qmI60YKU2kdPg41uiwQI_HmTWoSn64W1atTFwCEDuk0e_wdrIqGbj5kaxKmeddMbe7QYziQQVSzQL82Rc6kTPHQ");'>
+                            </div>
+                        </div>
+                        <div class="flex flex-1 flex-col p-5">
+                            <div class="mb-2 flex items-center gap-2">
+                                <span class="material-symbols-outlined text-sm text-primary">calendar_month</span>
+                                <span class="text-xs font-bold uppercase tracking-wider text-primary">
+                                    <span class="lang-en">Sep - Oct</span>
+                                    <span class="lang-ml hidden">സെപ്റ്റംബർ - ഒക്ടോബർ</span>
+                                </span>
+                            </div>
+                            <h3 class="mb-2 text-xl font-bold text-[#1b0e0e]">
+                                <span class="lang-en">Navaratri Mahotsavam</span>
+                                <span class="lang-ml hidden">നവരാത്രി മഹോത്സവം</span>
+                            </h3>
+                            <p class="mb-4 flex-1 text-sm text-text-muted">
+                                <span class="lang-en">Nine nights of worship dedicated to the three forms of Devi,
+                                    culminating in Vijayadashami.</span>
+                                <span class="lang-ml hidden leading-relaxed">ദേവിയുടെ മൂന്ന് ഭാവങ്ങളെ ആരാധിക്കുന്ന
+                                    ഒമ്പത് രാത്രികൾ, വിജയദശമിയോടെ സമാപിക്കുന്നു.</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div
+                        class="group flex flex-col overflow-hidden rounded-lg bg-white shadow-md transition-shadow hover:shadow-xl border border-[#e7d0d0]">
+                        <div class="aspect-video w-full overflow-hidden bg-gray-200">
+                            <div class="h-full w-full bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
+                                data-alt="Traditional temple festival procession"
+                                style='background-image: url("images/PratishtaDinam_watermarked.jpeg");'>
+                            </div>
+                        </div>
+                        <div class="flex flex-1 flex-col p-5">
+                            <div class="mb-2 flex items-center gap-2">
+                                <span class="material-symbols-outlined text-sm text-primary">calendar_month</span>
+                                <span class="text-xs font-bold uppercase tracking-wider text-primary">
+                                    <span class="lang-en">Annual</span>
+                                    <span class="lang-ml hidden">വാർഷികം</span>
+                                </span>
+                            </div>
+                            <h3 class="mb-2 text-xl font-bold text-[#1b0e0e]">
+                                <span class="lang-en">Pratishta Dinam</span>
+                                <span class="lang-ml hidden">പ്രതിഷ്ഠാ ദിനം</span>
+                            </h3>
+                            <p class="mb-4 flex-1 text-sm text-text-muted">
+                                <span class="lang-en">Celebrating the consecration anniversary with special abhishekams
+                                    and processions.</span>
+                                <span class="lang-ml hidden leading-relaxed">വിശേഷാൽ അഭിഷേകങ്ങളോടും എഴുന്നള്ളത്തോടും
+                                    കൂടി പ്രതിഷ്ഠാ ദിനം ആഘോഷിക്കുന്നു.</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div
+                        class="group flex flex-col overflow-hidden rounded-lg bg-white shadow-md transition-shadow hover:shadow-xl border border-[#e7d0d0]">
+                        <div class="aspect-video w-full overflow-hidden bg-gray-200">
+                            <div class="h-full w-full bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
+                                data-alt="Vishu Celebration"
+                                style='background-image: url("images/Vishu_watermarked.jpeg");'>
+                            </div>
+                        </div>
+                        <div class="flex flex-1 flex-col p-5">
+                            <div class="mb-2 flex items-center gap-2">
+                                <span class="material-symbols-outlined text-sm text-primary">calendar_month</span>
+                                <span class="text-xs font-bold uppercase tracking-wider text-primary">
+                                    <span class="lang-en">April</span>
+                                    <span class="lang-ml hidden">ഏപ്രിൽ</span>
+                                </span>
+                            </div>
+                            <h3 class="mb-2 text-xl font-bold text-[#1b0e0e]">
+                                <span class="lang-en">Vishu</span>
+                                <span class="lang-ml hidden">വിഷു</span>
+                            </h3>
+                            <p class="mb-4 flex-1 text-sm text-text-muted">
+                                <span class="lang-en">Celebrating the Malayalam New Year with offerings
+                                    (Vishukkani) and blessings.</span>
+                                <span class="lang-ml hidden leading-relaxed">വിഷുക്കണി ദർശനത്തോടും അനുഗ്രഹത്തോടും കൂടി
+                                    മലയാള പുതുവർഷം ആഘോഷിക്കുന്നു.</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="w-full py-16 bg-white border-t border-[#f3e7e7]" id="gallery">
+            <div class="mx-auto max-w-[960px] px-4 sm:px-10">
+                <div class="mb-10 flex flex-col items-center justify-center text-center gap-3">
+                    <div class="flex items-center gap-3">
+                        <span class="material-symbols-outlined text-accent-gold text-2xl">photo_camera</span>
+                        <h2 class="text-3xl font-bold text-[#1b0e0e]">
+                            <span class="lang-en">Divine Gallery</span>
+                            <span class="lang-ml hidden">ഗാലറി</span>
+                        </h2>
+                        <span class="material-symbols-outlined text-accent-gold text-2xl">photo_camera</span>
+                    </div>
+                    <p class="text-text-muted max-w-2xl">
+                        <span class="lang-en">Immerse yourself in the sacred ambiance and architectural splendor of
+                            Omkara Parashakti Devi Kshetram.</span>
+                        <span class="lang-ml hidden leading-relaxed">ഭക്തിയിലും ദേവീകടാക്ഷത്തിലും നിറയാൻ ഈ
+                            ക്ഷേത്രത്തിലേക്ക് സ്വാഗതം..</span>
+                    </p>
+                </div>
+                <div class="flex overflow-x-auto snap-x snap-mandatory gap-6 pb-8 -mx-4 px-4 sm:mx-0 sm:px-0"
+                    style="scrollbar-width: thin; scrollbar-color: #d4af37 #f1f1f1;">
+                    <div
+                        class="relative min-w-[300px] md:min-w-[340px] aspect-[3/4] snap-center overflow-hidden rounded-xl border-4 border-double border-accent-gold/20 shadow-lg transition-all hover:shadow-2xl hover:border-accent-gold/40 group">
+                        <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110"
+                            style="background-image: url('images/TemplePhoto_watermarked.jpeg');">
+                        </div>
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent"></div>
+                        <div class="absolute bottom-0 left-0 right-0 p-5 flex items-end justify-between">
+                            <div class="flex-1 mr-3 text-left">
+                                <h3 class="text-white font-display text-lg font-bold leading-tight drop-shadow-sm">
+                                    <span class="lang-en">Temple</span>
+                                    <span class="lang-ml hidden">ക്ഷേത്രം</span>
+                                </h3>
+                            </div>
+                            <a href="images/TemplePhoto_watermarked.jpeg" download aria-label="Download image"
+                                class="flex items-center justify-center w-10 h-10 shrink-0 rounded-full bg-accent-gold/90 text-white shadow-lg backdrop-blur-sm transition-transform hover:scale-110 hover:bg-primary">
+                                <span class="material-symbols-outlined text-xl">download</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div
+                        class="relative min-w-[300px] md:min-w-[340px] aspect-[3/4] snap-center overflow-hidden rounded-xl border-4 border-double border-accent-gold/20 shadow-lg transition-all hover:shadow-2xl hover:border-accent-gold/40 group">
+                        <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110"
+                            style="background-image: url('images/DeviPhoto_watermarked.png');">
+                        </div>
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent">
+                        </div>
+                        <div class="absolute bottom-0 left-0 right-0 p-5 flex items-end justify-between">
+                            <div class="flex-1 mr-3 text-left">
+                                <h3 class="text-white font-display text-lg font-bold leading-tight drop-shadow-sm">
+                                    <span class="lang-en">Darshan</span>
+                                    <span class="lang-ml hidden">ദർശനം</span>
+                                </h3>
+                                <p class="text-white/80 text-xs mt-1 font-medium tracking-wide">
+                                    <span class="lang-en">Omkara Parashakti</span>
+                                    <span class="lang-ml hidden">ഓംകാര പരാശക്തി</span>
+                                </p>
+                            </div>
+                            <a href="images/DeviPhoto_watermarked.png" download aria-label="Download image"
+                                class="flex items-center justify-center w-10 h-10 shrink-0 rounded-full bg-accent-gold/90 text-white shadow-lg backdrop-blur-sm transition-transform hover:scale-110 hover:bg-primary">
+                                <span class="material-symbols-outlined text-xl">download</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div
+                        class="relative min-w-[300px] md:min-w-[340px] aspect-[3/4] snap-center overflow-hidden rounded-xl border-4 border-double border-accent-gold/20 shadow-lg transition-all hover:shadow-2xl hover:border-accent-gold/40 group">
+                        <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110"
+                            style="background-image: url('images/DeviPainting_watermarked.jpeg');">
+                        </div>
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent">
+                        </div>
+                        <div class="absolute bottom-0 left-0 right-0 p-5 flex items-end justify-between">
+                            <div class="flex-1 mr-3 text-left">
+                                <h3 class="text-white font-display text-lg font-bold leading-tight drop-shadow-sm">
+                                    <span class="lang-en">Divine Painting</span>
+                                    <span class="lang-ml hidden">ദേവീ ചിത്രം</span>
+                                </h3>
+                                <p class="text-white/80 text-xs mt-1 font-medium tracking-wide">
+                                    <span class="lang-en">An artist's vision</span>
+                                    <span class="lang-ml hidden">കലാകാരൻ്റെ കാഴ്ചപ്പാടിൽ</span>
+                                </p>
+                            </div>
+                            <a href="images/DeviPainting_watermarked.jpeg" download aria-label="Download image"
+                                class="flex items-center justify-center w-10 h-10 shrink-0 rounded-full bg-accent-gold/90 text-white shadow-lg backdrop-blur-sm transition-transform hover:scale-110 hover:bg-primary">
+                                <span class="material-symbols-outlined text-xl">download</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+        </section>
+        <section class="w-full py-16" id="location">
+            <div class="mx-auto max-w-[960px] px-4 sm:px-10">
+                <div class="mb-8 flex flex-col gap-2">
+                    <h2 class="text-3xl font-bold text-[#1b0e0e]">
+                        <span class="lang-en">Sacred Location</span>
+                        <span class="lang-ml hidden">പുണ്യഭൂമി</span>
+                    </h2>
+                    <p class="text-text-muted">
+                        <span class="lang-en">Visit us to seek the blessings of the Divine Mother.</span>
+                        <span class="lang-ml hidden">ദേവിയുടെ അനുഗ്രഹം തേടി ക്ഷേത്രത്തിലേക്ക് സ്വാഗതം ചെയ്യുന്നു.</span>
+                    </p>
+                </div>
+                <div class="overflow-hidden rounded-xl border border-[#e7d0d0] bg-white shadow-sm">
+                    <div class="flex flex-col md:flex-row">
+                        <div class="flex flex-1 flex-col justify-center gap-6 p-8 md:p-10">
+                            <div class="flex items-start gap-4">
+                                <div
+                                    class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary">
+                                    <span class="material-symbols-outlined">location_on</span>
+                                </div>
+                                <div>
+                                    <div>
+                                        <h3 class="mb-1 text-lg font-bold text-[#1b0e0e]">
+                                            <span class="lang-en">Address</span>
+                                            <span class="lang-ml hidden">വിലാസം</span>
+                                        </h3>
+                                        <p class="text-text-muted">
+                                            <span class="lang-en">Omkara Parashakti Devi
+                                                Kshethram,<br />Kizhakkumpattukara,<br />Thrissur, Kerala -
+                                                680005</span>
+                                            <span class="lang-ml hidden leading-relaxed">ഓംകാര പരാശക്തി ദേവി
+                                                ക്ഷേത്രം,<br />കിഴക്കുംപാട്ടുകര,<br />തൃശൂർ, കേരളം - 680005</span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-4">
+                                <div
+                                    class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary">
+                                    <span class="material-symbols-outlined">schedule</span>
+                                </div>
+                                <div>
+                                    <div>
+                                        <h3 class="mb-1 text-lg font-bold text-[#1b0e0e]">
+                                            <span class="lang-en">Darshan Timings</span>
+                                            <span class="lang-ml hidden">ദർശന സമയം</span>
+                                        </h3>
+                                        <p class="text-text-muted">
+                                            <span class="lang-en">Morning: 6:00 AM - 9:00 AM</span>
+                                            <span class="lang-ml hidden">രാവിലെ: 6:00 - 9:00</span>
+                                            <br />
+                                            <span class="lang-en">Evening: 5:30 PM - 7:00 PM</span>
+                                            <span class="lang-ml hidden">വൈകുന്നേരം: 5:30 - 7:00</span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-4">
+                                <div
+                                    class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary">
+                                    <span class="material-symbols-outlined">call</span>
+                                </div>
+                                <div>
+                                    <div>
+                                        <h3 class="mb-1 text-lg font-bold text-[#1b0e0e]">
+                                            <span class="lang-en">Contact</span>
+                                            <span class="lang-ml hidden">ബന്ധപ്പെടുക</span>
+                                        </h3>
+                                        <p class="text-text-muted">
+                                            +91 81296 58390<br />
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div
+                                class="relative min-h-[300px] flex-1 bg-gray-100 md:min-h-auto border-t md:border-t-0 md:border-l border-[#e7d0d0]">
+                                <div class="absolute inset-0 bg-gray-200">
+                                    <iframe
+                                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3922.6474845705757!2d76.23096207469712!3d10.5284062637203!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba7efb03575f3ab%3A0x4252e5acbf2032b3!2sOmkara%20Parashakthi%20Kshethram!5e0!3m2!1sen!2sin!4v1769188984375!5m2!1sen!2sin"
+                                        width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </section>
+        <footer class="w-full bg-[#2b1b1b] text-white" id="contact">
+            <div class="mx-auto max-w-[960px] px-4 py-12 sm:px-10">
+                <div class="flex flex-col items-center justify-center gap-8 text-center">
+                    <div class="flex items-center gap-3">
+                        <div
+                            class="flex h-12 w-12 items-center justify-center rounded-full bg-accent-gold/20 text-accent-gold">
+                            <span class="material-symbols-outlined text-3xl">temple_hindu</span>
+                        </div>
+                        <h3 class="text-xl font-bold">Omkara Parashakti<br />Devi Kshethram</h3>
+                    </div>
+
+                    <div class="border-t border-white/10 pt-8 w-full max-w-md">
+                        <p class="text-xs text-white/40">
+                            © 2026 Omkara Parashakti Devi Kshethram. All rights reserved. <br />
+                            Designed with devotion.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>
