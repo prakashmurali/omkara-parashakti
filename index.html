@@ -190,10 +190,41 @@
                         <button id="btn-mobile-ml" onclick="toggleLanguage('ml')"
                             class="rounded-full px-2 py-1 text-[10px] font-bold text-text-muted transition-all">മലയാളം</button>
                     </div>
-                    <button class="flex items-center justify-center p-2 text-[#1b0e0e]">
+                    <button id="mobile-menu-btn" onclick="toggleMobileMenu()"
+                        class="flex items-center justify-center p-2 text-[#1b0e0e]">
                         <span class="material-symbols-outlined">menu</span>
                     </button>
                 </div>
+            </div>
+            <!-- Mobile Menu Dropdown -->
+            <div id="mobile-menu" class="hidden border-t border-[#f3e7e7] bg-[#fcf8f8] px-4 py-4 shadow-lg md:hidden">
+                <nav class="flex flex-col gap-4">
+                    <a class="text-sm font-medium text-[#1b0e0e] transition-colors hover:text-primary" href="#history"
+                        onclick="toggleMobileMenu()">
+                        <span class="lang-en">History</span>
+                        <span class="lang-ml hidden">ചരിത്രം</span>
+                    </a>
+                    <a class="text-sm font-medium text-[#1b0e0e] transition-colors hover:text-primary" href="#festivals"
+                        onclick="toggleMobileMenu()">
+                        <span class="lang-en">Festivals</span>
+                        <span class="lang-ml hidden">ഉത്സവങ്ങൾ</span>
+                    </a>
+                    <a class="text-sm font-medium text-[#1b0e0e] transition-colors hover:text-primary" href="#gallery"
+                        onclick="toggleMobileMenu()">
+                        <span class="lang-en">Gallery</span>
+                        <span class="lang-ml hidden">ഗാലറി</span>
+                    </a>
+                    <a class="text-sm font-medium text-[#1b0e0e] transition-colors hover:text-primary" href="#location"
+                        onclick="toggleMobileMenu()">
+                        <span class="lang-en">Location</span>
+                        <span class="lang-ml hidden">സ്ഥലം</span>
+                    </a>
+                    <a class="text-sm font-medium text-[#1b0e0e] transition-colors hover:text-primary" href="#contact"
+                        onclick="toggleMobileMenu()">
+                        <span class="lang-en">Contact</span>
+                        <span class="lang-ml hidden">ബന്ധപ്പെടുക</span>
+                    </a>
+                </nav>
             </div>
         </header>
         <div class="relative w-full">
