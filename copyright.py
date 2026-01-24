@@ -45,7 +45,7 @@ images_dir = "images"
 watermark_text = "© 2026 Omkara Parashakti Devi Kshethram"
 
 # Supported extensions
-valid_extensions = {".jpg", ".jpeg", ".png"}
+valid_extensions = {".jpg", ".jpeg", ".png", ".webp"}
 
 print(f"Processing images in {images_dir}...")
 
