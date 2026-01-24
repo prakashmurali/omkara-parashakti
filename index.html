@@ -74,7 +74,7 @@
     <script>
         function toggleLanguage(lang) {
             // Save preference
-            localStorage.setItem('preferredLanguage', lang);
+            localStorage.setItem('omkara_language_pref', lang);
 
             // Get all language elements
             const enElements = document.querySelectorAll('.lang-en');
@@ -138,7 +138,7 @@
 
         // Initialize on load
         document.addEventListener('DOMContentLoaded', () => {
-            const savedLang = localStorage.getItem('preferredLanguage') || 'ml';
+            const savedLang = localStorage.getItem('omkara_language_pref') || 'ml';
             toggleLanguage(savedLang);
         });
     </script>
