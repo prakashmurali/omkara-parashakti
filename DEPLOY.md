@@ -25,20 +25,34 @@ Once the repository is created, you will see a URL ending in `.git` (e.g., `http
 ## Step 4: Visits Your Site!
 GitHub will generate a link (usually `https://YOUR_USERNAME.github.io/omkara-parashakti/`).
 
-## Step 5: Using a Custom Domain (Optional)
-**Yes! You can completely hide the `github.io` name.**
+## Step 5: Configure GoDaddy DNS (Crucial)
 
-1.  **Buy your domain** (e.g., from GoDaddy, Namecheap, etc.).
-2.  **Configure DNS**:
-    *   Log in to your domain provider.
-    *   Find "DNS Management".
-    *   Add a **CNAME** record:
-        *   Host: `www`
-        *   Value: `YOUR_USERNAME.github.io`
-3.  **Configure GitHub**:
-    *   Go to Repository **Settings** > **Pages**.
-    *   Under **Custom domain**, type your domain (e.g., `www.yourtemple.com`).
-    *   Click **Save**.
-    *   Check the box **Enforce HTTPS** (this gives you the secure lock icon 🔒).
+To make `omkaraparashakti.com` show your site, you need to add **4 "A" records** and **1 "CNAME" record** in GoDaddy.
 
-Now, when users visit `www.yourtemple.com`, they will see your site, and "GitHub" will not appear anywhere in the address bar.
+1.  Log in to [GoDaddy](https://dcc.godaddy.com/domains).
+2.  Select your domain **omkaraparashakti.com**.
+3.  Scroll down to **DNS Records** (or select "Manage DNS").
+4.  **Add/Edit these specific records:**
+
+    ### A Records (Points your domain to GitHub)
+    | Type | Name | Value | TTL |
+    | :--- | :--- | :--- | :--- |
+    | A | @ | 185.199.108.153 | 600 Seconds (or default) |
+    | A | @ | 185.199.109.153 | 600 Seconds (or default) |
+    | A | @ | 185.199.110.153 | 600 Seconds (or default) |
+    | A | @ | 185.199.111.153 | 600 Seconds (or default) |
+
+    ### CNAME Record (Points www to your domain)
+    | Type | Name | Value | TTL |
+    | :--- | :--- | :--- | :--- |
+    | CNAME | www | omkaraparashakti.com | 1 Hour (or default) |
+
+    *(Delete any other existing "A" records with Name "@" or "Parked" to avoid conflicts)*.
+
+## Step 6: Verify in GitHub
+1.  Go to your repository **Settings** > **Pages**.
+2.  Under **Custom domain**, ensure `omkaraparashakti.com` is listed.
+3.  Wait for the "DNS Check" to pass (can take 15 mins to 24 hours).
+4.  Check **Enforce HTTPS**.
+
+Your site will be live at [https://omkaraparashakti.com](https://omkaraparashakti.com).
