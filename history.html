@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html class="light scroll-smooth" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>History — Omkara Parashakti Devi Kshethram</title>
+    <meta name="description"
+        content="The sacred history of Omkara Parashakti Devi Kshethram, Kizhakkumpattukara, Thrissur — tracing 150+ years from Shri I.D.C. Rajan to the present day." />
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&amp;family=Noto+Sans:wght@400;500;700&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#cf1717",
+                        "primary-dark": "#9b1111",
+                        "accent-gold": "#d4af37",
+                        "background-light": "#fcf8f8",
+                        "background-dark": "#211111",
+                        "text-main": "#1b0e0e",
+                        "text-muted": "#6b4e4e",
+                    },
+                    fontFamily: {
+                        "display": ["Noto Serif", "serif"],
+                        "sans": ["Noto Sans", "sans-serif"],
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #d4af37;
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #cf1717;
+        }
+
+        .timeline-line {
+            position: absolute;
+            left: 1.25rem;
+            top: 2.5rem;
+            bottom: 0;
+            width: 2px;
+            background: linear-gradient(to bottom, #d4af37, #cf1717, #d4af37);
+        }
+
+        .timeline-dot {
+            position: absolute;
+            left: 0.625rem;
+            top: 0.375rem;
+            width: 1.25rem;
+            height: 1.25rem;
+            border-radius: 9999px;
+            border: 3px solid #d4af37;
+            background: #fcf8f8;
+            z-index: 1;
+        }
+
+        .photo-placeholder {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #f3e7e7, #e7d0d0);
+            border: 2px dashed #d4af37;
+            border-radius: 0.75rem;
+            color: #6b4e4e;
+            font-size: 0.875rem;
+            text-align: center;
+            padding: 2rem;
+        }
+    </style>
+    <script>
+        function toggleLanguage(lang) {
+            localStorage.setItem('omkara_language_pref', lang);
+
+            const enElements = document.querySelectorAll('.lang-en');
+            const mlElements = document.querySelectorAll('.lang-ml');
+            const body = document.body;
+
+            if (lang === 'ml') {
+                enElements.forEach(el => el.classList.add('hidden'));
+                mlElements.forEach(el => el.classList.remove('hidden'));
+                body.classList.add('font-malayalam');
+            } else {
+                mlElements.forEach(el => el.classList.add('hidden'));
+                enElements.forEach(el => el.classList.remove('hidden'));
+                body.classList.remove('font-malayalam');
+            }
+
+            const btnEn = document.getElementById('btn-en');
+            const btnMl = document.getElementById('btn-ml');
+            const btnMobileEn = document.getElementById('btn-mobile-en');
+            const btnMobileMl = document.getElementById('btn-mobile-ml');
+
+            const activeClass = ['bg-accent-gold', 'text-white', 'shadow-sm'];
+            const inactiveClass = ['text-text-muted', 'hover:bg-accent-gold/10', 'hover:text-primary'];
+
+            if (lang === 'en') {
+                btnEn.classList.add(...activeClass);
+                btnEn.classList.remove('text-text-muted');
+                btnMl.classList.remove(...activeClass);
+                btnMl.classList.add('text-text-muted');
+                if (btnMobileEn) {
+                    btnMobileEn.classList.add(...activeClass);
+                    btnMobileEn.classList.remove('text-text-muted');
+                    btnMobileMl.classList.remove(...activeClass);
+                    btnMobileMl.classList.add('text-text-muted');
+                }
+            } else {
+                btnMl.classList.add(...activeClass);
+                btnMl.classList.remove('text-text-muted');
+                btnEn.classList.remove(...activeClass);
+                btnEn.classList.add('text-text-muted');
+                if (btnMobileEn) {
+                    btnMobileMl.classList.add(...activeClass);
+                    btnMobileMl.classList.remove('text-text-muted');
+                    btnMobileEn.classList.remove(...activeClass);
+                    btnMobileEn.classList.add('text-text-muted');
+                }
+            }
+        }
+
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const savedLang = localStorage.getItem('omkara_language_pref') || 'ml';
+            toggleLanguage(savedLang);
+        });
+    </script>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark text-text-main font-display antialiased">
+    <div class="relative flex h-auto min-h-screen w-full flex-col overflow-x-hidden">
+        <!-- Header -->
+        <header class="sticky top-0 z-50 w-full border-b border-[#f3e7e7] bg-[#fcf8f8]/95 backdrop-blur-sm">
+            <div class="mx-auto flex h-16 max-w-[960px] items-center justify-between px-4 sm:px-10">
+                <div class="flex items-center gap-3">
+                    <a href="index.html" class="flex items-center gap-3 no-underline">
+                        <span class="material-symbols-outlined text-primary text-3xl">temple_hindu</span>
+                        <h2 class="text-lg font-bold tracking-tight text-[#1b0e0e] sm:text-xl">Omkara Parashakti</h2>
+                    </a>
+                </div>
+                <div class="hidden items-center gap-6 md:flex">
+                    <nav class="flex gap-6">
+                        <a class="text-sm font-medium text-[#1b0e0e] transition-colors hover:text-primary"
+                            href="index.html">
+                            <span class="lang-en">Home</span>
+                            <span class="lang-ml hidden">ഹോം</span>
+                        </a>
+                        <a class="text-sm font-medium text-primary border-b-2 border-primary pb-0.5"
+                            href="history.html">
+                            <span class="lang-en">History</span>
+                            <span class="lang-ml hidden">ചരിത്രം</span>
+                        </a>
+                    </nav>
+                    <div class="h-6 w-px bg-accent-gold/30"></div>
+                    <div class="flex items-center rounded-full border border-accent-gold/30 bg-white p-1 shadow-sm">
+                        <button id="btn-en" onclick="toggleLanguage('en')"
+                            class="rounded-full bg-accent-gold px-4 py-1 text-xs font-bold tracking-wide text-white shadow-sm transition-all hover:bg-accent-gold/90">English</button>
+                        <button id="btn-ml" onclick="toggleLanguage('ml')"
+                            class="rounded-full px-4 py-1 text-xs font-bold text-text-muted transition-all hover:bg-accent-gold/10 hover:text-primary">മലയാളം</button>
+                    </div>
+                </div>
+                <div class="flex items-center gap-3 md:hidden">
+                    <div class="flex items-center rounded-full border border-accent-gold/30 bg-white p-1 shadow-sm">
+                        <button id="btn-mobile-en" onclick="toggleLanguage('en')"
+                            class="rounded-full bg-accent-gold px-2 py-1 text-[10px] font-bold tracking-wide text-white shadow-sm transition-all">Eng</button>
+                        <button id="btn-mobile-ml" onclick="toggleLanguage('ml')"
+                            class="rounded-full px-2 py-1 text-[10px] font-bold text-text-muted transition-all">മലയാളം</button>
+                    </div>
+                    <button id="mobile-menu-btn" onclick="toggleMobileMenu()"
+                        class="flex items-center justify-center p-2 text-[#1b0e0e]">
+                        <span class="material-symbols-outlined">menu</span>
+                    </button>
+                </div>
+            </div>
+            <!-- Mobile Menu Dropdown -->
+            <div id="mobile-menu" class="hidden border-t border-[#f3e7e7] bg-[#fcf8f8] px-4 py-4 shadow-lg md:hidden">
+                <nav class="flex flex-col gap-4">
+                    <a class="text-sm font-medium text-[#1b0e0e] transition-colors hover:text-primary" href="index.html"
+                        onclick="toggleMobileMenu()">
+                        <span class="lang-en">Home</span>
+                        <span class="lang-ml hidden">ഹോം</span>
+                    </a>
+                    <a class="text-sm font-medium text-primary font-bold" href="history.html"
+                        onclick="toggleMobileMenu()">
+                        <span class="lang-en">History</span>
+                        <span class="lang-ml hidden">ചരിത്രം</span>
+                    </a>
+                </nav>
+            </div>
+        </header>
+
+        <!-- Page Banner -->
+        <div class="relative w-full">
+            <div class="mx-auto flex max-w-[960px] flex-col px-4 py-8 sm:px-10 sm:py-12">
+                <div class="relative overflow-hidden rounded-xl border-4 border-double border-accent-gold shadow-xl">
+                    <div class="flex min-h-[280px] flex-col items-center justify-center gap-4 bg-cover bg-center p-8 text-center"
+                        style='background-image: linear-gradient(rgba(33, 17, 17, 0.5), rgba(33, 17, 17, 0.75)), url("images/TemplePhoto_watermarked.jpeg");'>
+                        <span class="text-accent-gold text-sm font-bold tracking-widest uppercase">
+                            <span class="lang-en">Omkara Parashakti Devi Kshethram</span>
+                            <span class="lang-ml hidden">ഓംകാര പരാശക്തി ദേവി ക്ഷേത്രം</span>
+                        </span>
+                        <h1
+                            class="text-3xl font-black leading-tight tracking-tight text-white sm:text-4xl lg:text-5xl drop-shadow-md">
+                            <span class="lang-en">Sacred History</span>
+                            <span class="lang-ml hidden">ക്ഷേത്ര ചരിത്രം</span>
+                        </h1>
+                        <p class="text-white/80 max-w-lg text-base">
+                            <span class="lang-en">A legacy of devotion spanning over 150 years</span>
+                            <span class="lang-ml hidden">150 വർഷങ്ങൾക്കു മുകളിലുള്ള ഭക്തിയുടെ പാരമ്പര്യം</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section: The Founder — Shri I.D.C. Rajan -->
+        <section class="w-full py-12" id="founder">
+            <div class="mx-auto max-w-[960px] px-4 sm:px-10">
+                <div class="mb-8 flex items-center gap-4">
+                    <div class="h-px flex-1 bg-accent-gold/40"></div>
+                    <span class="material-symbols-outlined text-accent-gold">person</span>
+                    <h2 class="text-2xl sm:text-3xl font-bold text-[#1b0e0e]">
+                        <span class="lang-en">The Founder — Shri I.D.C. Rajan</span>
+                        <span class="lang-ml hidden">സ്ഥാപകൻ — ശ്രീ ഐ.ഡി.സി. രാജൻ</span>
+                    </h2>
+                    <span class="material-symbols-outlined text-accent-gold">person</span>
+                    <div class="h-px flex-1 bg-accent-gold/40"></div>
+                </div>
+                <div class="grid gap-10 md:grid-cols-3 items-start">
+                    <div class="md:col-span-2 flex flex-col gap-5">
+                        <p class="text-lg leading-relaxed text-text-main">
+                            <span class="lang-en">
+                                <span class="float-left mr-3 text-5xl font-bold text-primary leading-[0.8]">S</span>hri
+                                I.D.C. Rajan, though a householder, lived his life like a sannyasi. He wore only a
+                                simple loin cloth and spent his days immersed in devotion and prayer. Family stories
+                                recall that every morning he would consume a ball of neem — a testament to his
+                                austere lifestyle.
+                            </span>
+                            <span class="lang-ml hidden leading-loose">
+                                <span class="float-left mr-3 text-5xl font-bold text-primary leading-[0.8]">ശ്രീ</span>
+                                ഐ.ഡി.സി. രാജൻ ഒരു ഗൃഹസ്ഥനായിരുന്നെങ്കിലും സന്ന്യാസിയെപ്പോലെ ജീവിച്ചു. ലളിതമായ
+                                ഒരു മുണ്ട് മാത്രം ധരിച്ച്, ഭക്തിയിലും പ്രാർത്ഥനയിലും മുഴുകിയാണ് അദ്ദേഹം
+                                ദിവസങ്ങൾ ചെലവഴിച്ചത്. എല്ലാ ദിവസവും രാവിലെ ഒരു വേപ്പ് ഉണ്ട
+                                കഴിക്കുമായിരുന്നുവെന്ന് കുടുംബ കഥകൾ ഓർമ്മിക്കുന്നു — അദ്ദേഹത്തിന്റെ
+                                കഠിനമായ ജീവിതശൈലിയുടെ തെളിവായിരുന്നു ഇത്.
+                            </span>
+                        </p>
+                        <p class="text-base leading-relaxed text-text-muted">
+                            <span class="lang-en">
+                                During his life, Shri I.D.C. Rajan was awakened to the presence of Devi in the form
+                                of a sacred trishulam (trident). He established the worship of the Devi at this spot,
+                                which would become the spiritual foundation of the temple we know today.
+                            </span>
+                            <span class="lang-ml hidden leading-loose">
+                                തന്റെ ജീവിതകാലത്ത്, ശ്രീ ഐ.ഡി.സി. രാജന് പവിത്രമായ ഒരു ത്രിശൂലത്തിന്റെ
+                                രൂപത്തിൽ ദേവിയുടെ സാന്നിധ്യം അനുഭവപ്പെട്ടു. ഇന്ന് നാം കാണുന്ന ക്ഷേത്രത്തിന്റെ
+                                ആത്മീയ അടിത്തറയായ ഈ സ്ഥലത്ത് അദ്ദേഹം ദേവിയുടെ ആരാധന സ്ഥാപിച്ചു.
+                            </span>
+                        </p>
+                        <p class="text-base leading-relaxed text-text-muted">
+                            <span class="lang-en">
+                                He predicted that at the time of his death, his body would be engulfed in fire by
+                                itself. During his final rites, onlookers were astonished to witness this
+                                extraordinary event, and they quickly completed the remaining ceremonies.
+                            </span>
+                            <span class="lang-ml hidden leading-loose">
+                                തന്റെ മരണ സമയത്ത് തന്റെ ശരീരം സ്വയം അഗ്നിയിൽ മുഴുകുമെന്ന് അദ്ദേഹം
+                                പ്രവചിച്ചിരുന്നു. അന്ത്യകർമ്മങ്ങൾക്കിടയിൽ ഈ അസാധാരണ സംഭവം കണ്ട്
+                                നോക്കിനിന്നവർ ആശ്ചര്യപ്പെട്ടു, ബാക്കി ചടങ്ങുകൾ അവർ വേഗം പൂർത്തിയാക്കി.
+                            </span>
+                        </p>
+                    </div>
+                    <div class="md:col-span-1">
+                        <!-- PLACEHOLDER: Photo of Shri I.D.C. Rajan -->
+                        <div class="photo-placeholder aspect-[3/4] w-full">
+                            <div class="flex flex-col items-center gap-2">
+                                <span class="material-symbols-outlined text-accent-gold text-4xl">photo_camera</span>
+                                <span class="lang-en">Photo of Shri I.D.C. Rajan</span>
+                                <span class="lang-ml hidden">ശ്രീ ഐ.ഡി.സി. രാജന്റെ ഫോട്ടോ</span>
+                                <span class="text-xs text-text-muted/60">
+                                    <span class="lang-en">(To be added)</span>
+                                    <span class="lang-ml hidden">(ചേർക്കാനുണ്ട്)</span>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section: The Temple Through Time -->
+        <section class="w-full bg-[#f8f1f1] py-16" id="timeline">
+            <div class="mx-auto max-w-[960px] px-4 sm:px-10">
+                <div class="mb-10 text-center">
+                    <h2 class="text-2xl sm:text-3xl font-bold text-[#1b0e0e]">
+                        <span class="lang-en">The Temple Through Time</span>
+                        <span class="lang-ml hidden">കാലത്തിലൂടെ ക്ഷേത്രം</span>
+                    </h2>
+                    <p class="mt-2 text-text-muted">
+                        <span class="lang-en">Key milestones in the sacred journey</span>
+                        <span class="lang-ml hidden">പുണ്യ യാത്രയിലെ പ്രധാന നാഴികക്കല്ലുകൾ</span>
+                    </p>
+                </div>
+                <div class="relative flex flex-col gap-10 pl-10">
+                    <div class="timeline-line"></div>
+
+                    <!-- Milestone 1 -->
+                    <div class="relative">
+                        <div class="timeline-dot"></div>
+                        <div class="rounded-lg bg-white p-6 shadow-md border border-[#e7d0d0]">
+                            <span class="text-xs font-bold uppercase tracking-wider text-primary">
+                                <span class="lang-en">Origins</span>
+                                <span class="lang-ml hidden">ആരംഭം</span>
+                            </span>
+                            <h3 class="mt-2 text-lg font-bold text-[#1b0e0e]">
+                                <span class="lang-en">The Sacred Trishulam</span>
+                                <span class="lang-ml hidden">പവിത്ര ത്രിശൂലം</span>
+                            </h3>
+                            <p class="mt-2 text-sm text-text-muted leading-relaxed">
+                                <span class="lang-en">Shri I.D.C. Rajan established the worship of Devi in the
+                                    form of a trishulam. Till the 1990s, the temple consisted only of this sacred
+                                    trident — a powerful symbol of Devi's presence.</span>
+                                <span class="lang-ml hidden leading-loose">ശ്രീ ഐ.ഡി.സി. രാജൻ ത്രിശൂല
+                                    രൂപത്തിൽ ദേവിയുടെ ആരാധന സ്ഥാപിച്ചു. 1990-കൾ വരെ, ക്ഷേത്രം ഈ
+                                    പവിത്ര ത്രിശൂലം മാത്രമായിരുന്നു — ദേവിയുടെ സാന്നിധ്യത്തിന്റെ
+                                    ശക്തമായ പ്രതീകം.</span>
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Milestone 2 -->
+                    <div class="relative">
+                        <div class="timeline-dot"></div>
+                        <div class="rounded-lg bg-white p-6 shadow-md border border-[#e7d0d0]">
+                            <span class="text-xs font-bold uppercase tracking-wider text-primary">
+                                <span class="lang-en">Transformation</span>
+                                <span class="lang-ml hidden">പരിവർത്തനം</span>
+                            </span>
+                            <h3 class="mt-2 text-lg font-bold text-[#1b0e0e]">
+                                <span class="lang-en">Shri I.D. Narayana Iyer — The Builder</span>
+                                <span class="lang-ml hidden">ശ്രീ ഐ.ഡി. നാരായണ അയ്യർ — നിർമ്മാതാവ്</span>
+                            </h3>
+                            <p class="mt-2 text-sm text-text-muted leading-relaxed">
+                                <span class="lang-en">Shri Irinjalakuda Doraiswamy Narayana Iyer (I.D. Narayana
+                                    Iyer), the son of Shri I.D.C. Rajan, had a deeply devotional nature from
+                                    a young age. He used to frequent nearby ashrams. Driven by a desire to expand
+                                    the temple, he performed the pratishta of Devi in Her vigraha swaroopam and
+                                    personally designed the temple as it stands today.</span>
+                                <span class="lang-ml hidden leading-loose">ശ്രീ ഐ.ഡി.സി. രാജന്റെ
+                                    മകനായ ശ്രീ ഇരിഞ്ഞാലക്കുട ദൊരൈസ്വാമി നാരായണ അയ്യർ (ഐ.ഡി. നാരായണ അയ്യർ),
+                                    ചെറുപ്പം മുതൽ തന്നെ ആഴമായ ഭക്തി ഉള്ളവനായിരുന്നു. സമീപത്തെ ആശ്രമങ്ങളിൽ
+                                    പതിവായി പോകുമായിരുന്നു. ക്ഷേത്രം വികസിപ്പിക്കാനുള്ള ആഗ്രഹത്താൽ
+                                    പ്രേരിതനായി, അദ്ദേഹം ദേവിയുടെ വിഗ്രഹ സ്വരൂപത്തിൽ പ്രതിഷ്ഠ
+                                    നടത്തുകയും ഇന്ന് കാണുന്ന ക്ഷേത്രം നേരിട്ട് രൂപകൽപ്പന ചെയ്യുകയും
+                                    ചെയ്തു.</span>
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Milestone 3 -->
+                    <div class="relative">
+                        <div class="timeline-dot"></div>
+                        <div class="rounded-lg bg-white p-6 shadow-md border border-[#e7d0d0]">
+                            <span class="text-xs font-bold uppercase tracking-wider text-primary">
+                                <span class="lang-en">2013</span>
+                                <span class="lang-ml hidden">2013</span>
+                            </span>
+                            <h3 class="mt-2 text-lg font-bold text-[#1b0e0e]">
+                                <span class="lang-en">Kumbhabhishekam</span>
+                                <span class="lang-ml hidden">കുംഭാഭിഷേകം</span>
+                            </h3>
+                            <p class="mt-2 text-sm text-text-muted leading-relaxed">
+                                <span class="lang-en">The grand Kumbhabhishekam was performed in 2013, marking a
+                                    significant spiritual milestone for the temple and the community.</span>
+                                <span class="lang-ml hidden leading-loose">2013-ൽ മഹത്തായ കുംഭാഭിഷേകം
+                                    നടത്തുകയുണ്ടായി — ക്ഷേത്രത്തിനും സമൂഹത്തിനും ഒരു സുപ്രധാന
+                                    ആത്മീയ നാഴികക്കല്ല്.</span>
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Milestone 4 -->
+                    <div class="relative">
+                        <div class="timeline-dot"></div>
+                        <div class="rounded-lg bg-white p-6 shadow-md border border-[#e7d0d0]">
+                            <span class="text-xs font-bold uppercase tracking-wider text-primary">
+                                <span class="lang-en">Present Day</span>
+                                <span class="lang-ml hidden">ഇന്ന്</span>
+                            </span>
+                            <h3 class="mt-2 text-lg font-bold text-[#1b0e0e]">
+                                <span class="lang-en">The Trust</span>
+                                <span class="lang-ml hidden">ട്രസ്റ്റ്</span>
+                            </h3>
+                            <p class="mt-2 text-sm text-text-muted leading-relaxed">
+                                <span class="lang-en">The temple is currently managed by the
+                                    <strong>Shri ID Narayana Iyer and Smt. PS Rajammal Trust</strong>, ensuring
+                                    the continuation of its sacred traditions and the legacy of its founders.</span>
+                                <span class="lang-ml hidden leading-loose">ക്ഷേത്രം ഇപ്പോൾ <strong>ശ്രീ ഐ.ഡി.
+                                        നാരായണ അയ്യർ ആൻഡ് ശ്രീമതി പി.എസ്. രാജമ്മാൾ ട്രസ്റ്റ്</strong>
+                                    നിയന്ത്രിക്കുന്നു — അതിന്റെ പാരമ്പര്യവും സ്ഥാപകരുടെ മൂല്യങ്ങളും
+                                    തുടർന്നുകൊണ്ടുപോകുന്നു.</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section: Photo Gallery -->
+        <section class="w-full py-16" id="photos">
+            <div class="mx-auto max-w-[960px] px-4 sm:px-10">
+                <div class="mb-10 text-center">
+                    <h2 class="text-2xl sm:text-3xl font-bold text-[#1b0e0e]">
+                        <span class="lang-en">Historical Gallery</span>
+                        <span class="lang-ml hidden">ചരിത്ര ഗാലറി</span>
+                    </h2>
+                </div>
+                <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+                    <!-- PLACEHOLDER: I.D. Narayana Iyer Photo -->
+                    <div class="photo-placeholder aspect-[3/4] w-full">
+                        <div class="flex flex-col items-center gap-2">
+                            <span class="material-symbols-outlined text-accent-gold text-4xl">photo_camera</span>
+                            <span class="font-bold lang-en">Shri I.D. Narayana Iyer</span>
+                            <span class="font-bold lang-ml hidden">ശ്രീ ഐ.ഡി. നാരായണ അയ്യർ</span>
+                            <span class="text-xs text-text-muted/60">
+                                <span class="lang-en">(To be added)</span>
+                                <span class="lang-ml hidden">(ചേർക്കാനുണ്ട്)</span>
+                            </span>
+                        </div>
+                    </div>
+                    <!-- PLACEHOLDER: Kumbhabhishekam 2013 Photo -->
+                    <div class="photo-placeholder aspect-[3/4] w-full">
+                        <div class="flex flex-col items-center gap-2">
+                            <span class="material-symbols-outlined text-accent-gold text-4xl">photo_camera</span>
+                            <span class="font-bold lang-en">Kumbhabhishekam 2013</span>
+                            <span class="font-bold lang-ml hidden">കുംഭാഭിഷേകം 2013</span>
+                            <span class="text-xs text-text-muted/60">
+                                <span class="lang-en">(To be added)</span>
+                                <span class="lang-ml hidden">(ചേർക്കാനുണ്ട്)</span>
+                            </span>
+                        </div>
+                    </div>
+                    <!-- PLACEHOLDER: I.D.C. Rajan Photo (repeated for gallery) -->
+                    <div class="photo-placeholder aspect-[3/4] w-full">
+                        <div class="flex flex-col items-center gap-2">
+                            <span class="material-symbols-outlined text-accent-gold text-4xl">photo_camera</span>
+                            <span class="font-bold lang-en">Shri I.D.C. Rajan</span>
+                            <span class="font-bold lang-ml hidden">ശ്രീ ഐ.ഡി.സി. രാജൻ</span>
+                            <span class="text-xs text-text-muted/60">
+                                <span class="lang-en">(To be added)</span>
+                                <span class="lang-ml hidden">(ചേർക്കാനുണ്ട്)</span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Back to Home -->
+        <section class="w-full py-8">
+            <div class="mx-auto max-w-[960px] px-4 sm:px-10 text-center">
+                <a href="index.html"
+                    class="inline-flex items-center gap-2 rounded-full bg-primary px-8 py-3 text-sm font-bold text-white shadow-lg transition-all hover:bg-primary-dark hover:shadow-xl">
+                    <span class="material-symbols-outlined text-lg">arrow_back</span>
+                    <span class="lang-en">Back to Home</span>
+                    <span class="lang-ml hidden">ഹോം പേജിലേക്ക്</span>
+                </a>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="w-full bg-[#2b1b1b] text-white" id="contact">
+            <div class="mx-auto max-w-[960px] px-4 py-12 sm:px-10">
+                <div class="flex flex-col items-center justify-center gap-8 text-center">
+                    <div class="flex items-center gap-3">
+                        <div
+                            class="flex h-12 w-12 items-center justify-center rounded-full bg-accent-gold/20 text-accent-gold">
+                            <span class="material-symbols-outlined text-3xl">temple_hindu</span>
+                        </div>
+                        <h3 class="text-xl font-bold">Omkara Parashakti<br />Devi Kshethram</h3>
+                    </div>
+
+                    <div class="border-t border-white/10 pt-8 w-full max-w-md">
+                        <p class="text-xs text-white/40">
+                            © 2026 Omkara Parashakti Devi Kshethram. All rights reserved. <br />
+                            Designed with devotion.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>
