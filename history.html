@@ -435,68 +435,88 @@
             </div>
         </section>
 
-        <!-- Section: Photo Gallery -->
-        <section class="w-full py-16" id="photos">
+        <!-- Section: Historical Gallery -->
+        <section class="w-full py-16 bg-white border-t border-[#f3e7e7]" id="photos">
             <div class="mx-auto max-w-[960px] px-4 sm:px-10">
-                <div class="mb-10 text-center">
-                    <h2 class="text-2xl sm:text-3xl font-bold text-[#1b0e0e]">
-                        <span class="lang-en">Historical Gallery</span>
-                        <span class="lang-ml hidden">ചരിത്ര ഗാലറി</span>
-                    </h2>
+                <div class="mb-10 flex flex-col items-center justify-center text-center gap-3">
+                    <div class="flex items-center gap-3">
+                        <span class="material-symbols-outlined text-accent-gold text-2xl">photo_camera</span>
+                        <h2 class="text-3xl font-bold text-[#1b0e0e]">
+                            <span class="lang-en">Historical Gallery</span>
+                            <span class="lang-ml hidden">ചരിത്ര ഗാലറി</span>
+                        </h2>
+                        <span class="material-symbols-outlined text-accent-gold text-2xl">photo_camera</span>
+                    </div>
+                    <p class="text-text-muted max-w-2xl">
+                        <span class="lang-en">Rare photographs from the temple's sacred history and heritage.</span>
+                        <span class="lang-ml hidden leading-relaxed">ക്ഷേത്രത്തിന്റെ പവിത്രമായ ചരിത്രത്തിൽ നിന്നുള്ള
+                            അപൂർവ ചിത്രങ്ങൾ.</span>
+                    </p>
                 </div>
-                <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+                <div class="flex overflow-x-auto snap-x snap-mandatory gap-6 pb-8 -mx-4 px-4 sm:mx-0 sm:px-0"
+                    style="scrollbar-width: thin; scrollbar-color: #d4af37 #f1f1f1;">
                     <!-- I.D. Narayana Iyer Photo -->
                     <div onclick="openLightbox('images/IDNarayanaIyer_watermarked.jpeg', 'Shri ID Narayana Iyer and Smt PS Rajammal')"
-                        class="relative aspect-[3/4] w-full overflow-hidden rounded-xl shadow-lg border-4 border-white bg-[#f3e7e7] group cursor-pointer">
+                        class="relative min-w-[300px] md:min-w-[340px] aspect-[3/4] snap-center overflow-hidden rounded-xl border-4 border-double border-accent-gold/20 shadow-lg transition-all hover:shadow-2xl hover:border-accent-gold/40 group cursor-pointer">
                         <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110"
-                            data-alt="Shri I.D. Narayana Iyer"
                             style='background-image: url("images/IDNarayanaIyer_watermarked.jpeg");'>
                         </div>
-                        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4">
-                            <p class="text-white text-sm font-bold drop-shadow-sm">
-                                <span class="lang-en">Shri ID Narayana Iyer and Smt PS Rajammal</span>
-                                <span class="lang-ml hidden">ശ്രീ ഐ.ഡി. നാരായണ അയ്യർ, ശ്രീമതി പി.എസ്. രാജമ്മാൾ</span>
-                            </p>
-                        </div>
-                        <div
-                            class="absolute top-3 right-3 bg-black/50 rounded-full p-1.5 opacity-0 group-hover:opacity-100 transition-opacity">
-                            <span class="material-symbols-outlined text-white text-lg">zoom_in</span>
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent"></div>
+                        <div class="absolute bottom-0 left-0 right-0 p-5 flex items-end justify-between">
+                            <div class="flex-1 mr-3 text-left">
+                                <h3 class="text-white font-display text-lg font-bold leading-tight drop-shadow-sm">
+                                    <span class="lang-en">Shri ID Narayana Iyer & Smt PS Rajammal</span>
+                                    <span class="lang-ml hidden">ശ്രീ ഐ.ഡി. നാരായണ അയ്യർ, ശ്രീമതി പി.എസ്.
+                                        രാജമ്മാൾ</span>
+                                </h3>
+                            </div>
+                            <a href="images/IDNarayanaIyer_watermarked.jpeg" download aria-label="Download image"
+                                onclick="event.stopPropagation()"
+                                class="flex items-center justify-center w-10 h-10 shrink-0 rounded-full bg-accent-gold/90 text-white shadow-lg backdrop-blur-sm transition-transform hover:scale-110 hover:bg-primary">
+                                <span class="material-symbols-outlined text-xl">download</span>
+                            </a>
                         </div>
                     </div>
                     <!-- Kumbhabhishekam 2013 Photo -->
                     <div onclick="openLightbox('images/kumbhabhishekam_watermarked.jpeg', 'Kumbhabhishekam 2013')"
-                        class="relative aspect-[3/4] w-full overflow-hidden rounded-xl shadow-lg border-4 border-white bg-[#f3e7e7] group cursor-pointer">
+                        class="relative min-w-[300px] md:min-w-[340px] aspect-[3/4] snap-center overflow-hidden rounded-xl border-4 border-double border-accent-gold/20 shadow-lg transition-all hover:shadow-2xl hover:border-accent-gold/40 group cursor-pointer">
                         <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110"
-                            data-alt="Kumbhabhishekam 2013"
                             style='background-image: url("images/kumbhabhishekam_watermarked.jpeg");'>
                         </div>
-                        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4">
-                            <p class="text-white text-sm font-bold drop-shadow-sm">
-                                <span class="lang-en">Kumbhabhishekam 2013</span>
-                                <span class="lang-ml hidden">കുംഭാഭിഷേകം 2013</span>
-                            </p>
-                        </div>
-                        <div
-                            class="absolute top-3 right-3 bg-black/50 rounded-full p-1.5 opacity-0 group-hover:opacity-100 transition-opacity">
-                            <span class="material-symbols-outlined text-white text-lg">zoom_in</span>
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent"></div>
+                        <div class="absolute bottom-0 left-0 right-0 p-5 flex items-end justify-between">
+                            <div class="flex-1 mr-3 text-left">
+                                <h3 class="text-white font-display text-lg font-bold leading-tight drop-shadow-sm">
+                                    <span class="lang-en">Kumbhabhishekam 2013</span>
+                                    <span class="lang-ml hidden">കുംഭാഭിഷേകം 2013</span>
+                                </h3>
+                            </div>
+                            <a href="images/kumbhabhishekam_watermarked.jpeg" download aria-label="Download image"
+                                onclick="event.stopPropagation()"
+                                class="flex items-center justify-center w-10 h-10 shrink-0 rounded-full bg-accent-gold/90 text-white shadow-lg backdrop-blur-sm transition-transform hover:scale-110 hover:bg-primary">
+                                <span class="material-symbols-outlined text-xl">download</span>
+                            </a>
                         </div>
                     </div>
                     <!-- I.D.C. Rajan Photo -->
                     <div onclick="openLightbox('images/rotated_idc_rajan_watermarked.jpeg', 'Shri I.D.C. Rajan')"
-                        class="relative aspect-[4/3] w-full overflow-hidden rounded-xl shadow-lg border-4 border-white bg-[#f3e7e7] group cursor-pointer">
-                        <div class="absolute inset-0 bg-contain bg-center bg-no-repeat transition-transform duration-700 group-hover:scale-110"
-                            data-alt="Shri I.D.C. Rajan"
-                            style='background-image: url("images/rotated_idc_rajan_watermarked.jpeg"); background-color: #f3e7e7;'>
+                        class="relative min-w-[300px] md:min-w-[340px] aspect-[3/4] snap-center overflow-hidden rounded-xl border-4 border-double border-accent-gold/20 shadow-lg transition-all hover:shadow-2xl hover:border-accent-gold/40 group cursor-pointer">
+                        <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110"
+                            style='background-image: url("images/rotated_idc_rajan_watermarked.jpeg");'>
                         </div>
-                        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4">
-                            <p class="text-white text-sm font-bold drop-shadow-sm">
-                                <span class="lang-en">Shri I.D.C. Rajan</span>
-                                <span class="lang-ml hidden">ശ്രീ ഐ.ഡി.സി. രാജൻ</span>
-                            </p>
-                        </div>
-                        <div
-                            class="absolute top-3 right-3 bg-black/50 rounded-full p-1.5 opacity-0 group-hover:opacity-100 transition-opacity">
-                            <span class="material-symbols-outlined text-white text-lg">zoom_in</span>
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent"></div>
+                        <div class="absolute bottom-0 left-0 right-0 p-5 flex items-end justify-between">
+                            <div class="flex-1 mr-3 text-left">
+                                <h3 class="text-white font-display text-lg font-bold leading-tight drop-shadow-sm">
+                                    <span class="lang-en">Shri I.D.C. Rajan</span>
+                                    <span class="lang-ml hidden">ശ്രീ ഐ.ഡി.സി. രാജൻ</span>
+                                </h3>
+                            </div>
+                            <a href="images/rotated_idc_rajan_watermarked.jpeg" download aria-label="Download image"
+                                onclick="event.stopPropagation()"
+                                class="flex items-center justify-center w-10 h-10 shrink-0 rounded-full bg-accent-gold/90 text-white shadow-lg backdrop-blur-sm transition-transform hover:scale-110 hover:bg-primary">
+                                <span class="material-symbols-outlined text-xl">download</span>
+                            </a>
                         </div>
                     </div>
                 </div>
